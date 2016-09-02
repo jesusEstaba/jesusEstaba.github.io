@@ -3,8 +3,92 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Personal Github Page</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-	<h1>Jesús Estaba</h1>
+	<div class="loading">
+		<i class='fa fa-circle-o-notch fa-spin'></i>
+	</div>
+	<div class="after-loading">
+		<nav>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<h1>Jesús Estaba</h1>
+						<h3>Personal <span class="gh-color">Github</span> Page</h3>
+					</div>
+				</div>
+			</div>
+			
+		</nav>
+		<section class="more-top-space">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="box white">
+							<div class="box">
+								<h3>Github Projects</h3>
+								<div class="proyects-list">
+									
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4">
+									<p>
+										<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero nemo dolor veniam enim reiciendis numquam perferendis vero! Asperiores minima iusto sunt facere eum, explicabo rem eius accusantium dolorum. Vel, facilis.</span><span>Voluptatibus laborum cum modi voluptates nulla odit sapiente possimus, voluptas assumenda quis fuga commodi ut quas molestiae nemo voluptate alias excepturi officia aut tempore inventore. Quasi vel est natus veniam.</span>
+									</p>
+								</div>
+								<div class="col-md-4">
+									<p>
+										<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero nemo dolor veniam enim reiciendis numquam perferendis vero! Asperiores minima iusto sunt facere eum, explicabo rem eius accusantium dolorum. Vel, facilis.</span><span>Voluptatibus laborum cum modi voluptates nulla odit sapiente possimus, voluptas assumenda quis fuga commodi ut quas molestiae nemo voluptate alias excepturi officia aut tempore inventore. Quasi vel est natus veniam.</span>
+									</p>
+								</div>
+								<div class="col-md-4">
+									<p>
+										<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero nemo dolor veniam enim reiciendis numquam perferendis vero! Asperiores minima iusto sunt facere eum, explicabo rem eius accusantium dolorum. Vel, facilis.</span><span>Voluptatibus laborum cum modi voluptates nulla odit sapiente possimus, voluptas assumenda quis fuga commodi ut quas molestiae nemo voluptate alias excepturi officia aut tempore inventore. Quasi vel est natus veniam.</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			
+		</footer>
+	</div>
+	
+	
+	
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$(function(){
+			$.get('https://api.github.com/users/jesusEstaba/repos', function(data) {
+				var add = '';
+				
+				data.forEach(function (element) {
+					add += '<div class="project"><h4>' + element.name + '</h4></div>';
+				});
+
+				$('.proyects-list').append(add);
+				
+				$('.loading').fadeOut('fast', function(){
+					$('.after-loading').fadeIn('slow');
+				});
+				
+			});
+
+		});
+	</script>
 </body>
 </html>
