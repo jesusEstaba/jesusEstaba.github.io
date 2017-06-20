@@ -1,94 +1,114 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<title>Personal Github Page</title>
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-</head>
-<body>
-	<div class="loading">
-		<i class='fa fa-circle-o-notch fa-spin'></i>
-	</div>
-	<div class="after-loading">
-		<nav>
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12">
-						<h1>Jesús Estaba</h1>
-						<h3>Personal <span class="gh-color">Github</span> Page</h3>
-					</div>
-				</div>
-			</div>
-			
-		</nav>
-		<section class="more-top-space">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12">
-						<div class="box white">
-							<div class="box">
-								<h3>Github Projects</h3>
-								<div class="proyects-list">
-									
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-4">
-									<p>
-										<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero nemo dolor veniam enim reiciendis numquam perferendis vero! Asperiores minima iusto sunt facere eum, explicabo rem eius accusantium dolorum. Vel, facilis.</span><span>Voluptatibus laborum cum modi voluptates nulla odit sapiente possimus, voluptas assumenda quis fuga commodi ut quas molestiae nemo voluptate alias excepturi officia aut tempore inventore. Quasi vel est natus veniam.</span>
-									</p>
-								</div>
-								<div class="col-md-4">
-									<p>
-										<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero nemo dolor veniam enim reiciendis numquam perferendis vero! Asperiores minima iusto sunt facere eum, explicabo rem eius accusantium dolorum. Vel, facilis.</span><span>Voluptatibus laborum cum modi voluptates nulla odit sapiente possimus, voluptas assumenda quis fuga commodi ut quas molestiae nemo voluptate alias excepturi officia aut tempore inventore. Quasi vel est natus veniam.</span>
-									</p>
-								</div>
-								<div class="col-md-4">
-									<p>
-										<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero nemo dolor veniam enim reiciendis numquam perferendis vero! Asperiores minima iusto sunt facere eum, explicabo rem eius accusantium dolorum. Vel, facilis.</span><span>Voluptatibus laborum cum modi voluptates nulla odit sapiente possimus, voluptas assumenda quis fuga commodi ut quas molestiae nemo voluptate alias excepturi officia aut tempore inventore. Quasi vel est natus veniam.</span>
-									</p>
-								</div>
-							</div>
-						</div>
-						
-					</div>
-				</div>
-			</div>
-		</section>
-		<footer>
-			
-		</footer>
-	</div>
-	
-	
-	
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<script type="text/javascript">
-		$(function(){
-			$.get('https://api.github.com/users/jesusEstaba/repos', function(data) {
-				var add = '';
-				
-				data.forEach(function (element) {
-					add += '<div class="project"><h4>' + element.name + '</h4></div>';
-				});
-
-				$('.proyects-list').append(add);
-				
-				$('.loading').fadeOut('fast', function(){
-					$('.after-loading').fadeIn('slow');
-				});
-				
-			});
-
-		});
-	</script>
-</body>
+<!doctype html>
+<html amp lang="es">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Pagina de Github de Jesús Estaba</title>
+    
+    <link rel="canonical" href="https://jesusestaba.github.io" />
+    
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Open-source framework for publishing content",
+        "datePublished": "2015-10-07T12:02:41Z",
+        "image": [
+          "logo.jpg"
+        ]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  	<style amp-custom>
+  		body {
+  			margin: 0;
+  			font-family: "Open Sans", Helvetica, Arial;
+  		}
+  		header {
+  			height: 200px;
+  			background-color: #007f7f;
+  		}
+  		.photo-profile {	
+  			border-radius: 50%;
+  			display: block;
+  			margin: 0 auto;
+  			box-shadow: 0 2px 5px rgba(0,0,0,.26);
+  		}
+  		h1, h2{
+			text-align: center;
+  		}
+  		h1 {
+  			font-size: 	1.8em;
+  			margin-bottom: 	.5em;
+  		}
+  		h2 {
+  			margin: .5em 0;
+  			font-size: 1.2em;
+  			color: #65a0a0;
+  		}
+  		nav>ul {
+  			margin: 0;	
+  			padding: 0;	
+  		}
+  		nav>ul>li {
+  			display: inline-block;
+  		}
+  		nav>ul>li>a {
+			text-decoration: none;
+  		}
+  		.nickname {
+			font-weight: bold;
+			font-size: 3em;
+			color: #ffffff;
+  		}
+  		.container {
+  			width: 1000px;	
+  			margin: 0 auto;
+  			padding: 0 1em;
+  		}
+  		.photo-profile-wrap{
+  			margin-top: -75px;
+  		}
+  		@media (max-width: 1000px) {
+  			.container{
+  				width: auto;
+  			}
+  		}
+  	</style>
+  	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  </head>
+  <body>
+  	<header>
+  		<div class="container">	
+			<nav>
+	  			<ul>
+	  				<li><a class="nickname" href="/">Jeec</a></li>
+	  			</ul>
+	  		</nav>
+  		</div>
+  	</header>
+  	<main>
+  		<section id="about-me">
+  			<div class="photo-profile-wrap">
+  				<amp-img class="photo-profile" src="images/mypic.jpg" width="150" height="150"></amp-img>
+  			</div>
+  			
+	  		<h1>Jesús E. Estaba</h1>
+	  		<h2>
+	  			Desarrollador Web
+	  		</h2>
+	  		<!--
+					tags badges redondos
+	  		-->
+	  		<div class="container">	
+				<p>
+	  				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit eveniet, dolorum provident natus nam mollitia ullam odit earum nobis id molestiae, a cumque, sequi laudantium. Debitis, quis accusamus est nobis, amet sit. Quia eveniet praesentium fuga doloremque autem dolores eos eligendi, ratione, id enim quos dignissimos dolorum corrupti! Temporibus, quisquam.
+	  			</p>
+	  		</div>
+  		</section>
+  		
+  	</main>
+    
+  </body>
 </html>
